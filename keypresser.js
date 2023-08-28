@@ -451,23 +451,23 @@ function addTable() {
                     "<td colspan='1' align='center'>" + 
                         "<a href='#' onclick='return setEditMode(2)' id='buttonc' class='tooltip farm_icon farm_icon_c'  title='Button C'>"+
                     "<td colspan='1' align='center'>" + 
-                        "<input class='btn tooltip' type='button' value='Ignorer' onclick='return setEditMode(3)' style='margin:0px 0px 0px 0px' title='Ignore la ligne de pillage'/>" + 
+                        "<input class='btn tooltip' type='button' value='Ignore' onclick='return setEditMode(3)' style='margin:0px 0px 0px 0px' title='Ignore the plunder line'/>" + 
                     "<td colspan='1' align='center'>" + 
                         "<a href='#' onclick='return setEditMode(4)' id='buttonleft' class='tooltip ' title='<-'><-</a>" + 
                     "<td colspan='1' align='center'>" + 
                         "<a href='#' onclick='return setEditMode(5)' id='buttonright' class='tooltip ' title='->'>-></a>" +
                 "</tr>" + 
                 "<tr id='keysRow'>"+
-                    "<th colspan='1'>Touche:<td align='center'>" +
+                    "<th colspan='1'>Key:<td align='center'>" +
             String.fromCharCode(keycodes.a) + "<td align='center'>" + String.fromCharCode(keycodes.b) + "<td align='center'>" + String.fromCharCode(
                 keycodes.c) + "<td align='center'>" + String.fromCharCode(keycodes.skip) +
             "<td>"+ String.fromCharCode(keycodes.left)+ "<td>"+ String.fromCharCode(keycodes.right) +"</tr></tbody></table></div>"));
     $('#divFAPress')
         .append($(
-            "<table id='faKeySettings' class='vis' style='width:100%' cellspacing='0'><thead><tr><th colspan='3'><em>Settings</em> - <a href'#' id='showSettings' onclick='return doSettings()'>Cacher</a></thead><tbody id='bodySettings'><tr><td colspan='1' align='center'><input type='checkbox' id='chbLoadPages' onclick='return chkBoxClick($(this).is(\":checked\"), " +
-            pos.s.loadp + ")'> <b>Charger les pages</b><td colspan='4'>De <input type='text' id='txtFirstPage' size='2' maxlength='2' value='" + userset[pos.s.fp] +
+            "<table id='faKeySettings' class='vis' style='width:100%' cellspacing='0'><thead><tr><th colspan='3'><em>Settings</em> - <a href'#' id='showSettings' onclick='return doSettings()'>Hide</a></thead><tbody id='bodySettings'><tr><td colspan='1' align='center'><input type='checkbox' id='chbLoadPages' onclick='return chkBoxClick($(this).is(\":checked\"), " +
+            pos.s.loadp + ")'> <b>Load the pages</b><td colspan='4'>De <input type='text' id='txtFirstPage' size='2' maxlength='2' value='" + userset[pos.s.fp] +
             "' onchange='onlyNum(this);' Disabled> Ã  <input type='text' id='txtLastPage' size='2' maxlength='2' value='" + userset[pos.s.lp] +
-            "' onchange='onlyNum(this);' Disabled><tr><td align='center'><b>Cacher</b><td><input type='checkbox' id='chbRemAxes' onclick='return chkBoxClick($(this).is(\":checked\"), " + pos.s
+            "' onchange='onlyNum(this);' Disabled><tr><td align='center'><b>Hide</b><td><input type='checkbox' id='chbRemAxes' onclick='return chkBoxClick($(this).is(\":checked\"), " + pos.s
             .remaxes +
             ")'> <img src='https://media.innogamescdn.com/com_DS_FR/Scripts/Pillage/attacks.png' title='Ongoing attacks (specify from how many)' alt='' class='tooltip' /> Attaques en cours <input type='text' id='txtNbAttacks' size='2' maxlength='2' value='" + userset[pos.s.MaxNbAttacks] + "' onchange='onlyNum(this)' Disabled><input type='checkbox' id='chbRemBlue' onclick='return chkBoxClick($(this).is(\":checked\"), " +
             pos.s.remblue +
@@ -481,7 +481,7 @@ function addTable() {
             pos.s.remredb +
             ")'> <img src='https://media.innogamescdn.com/com_DS_FR/Scripts/Pillage/red_blue.png' title='Defeated, but spied upon' alt='' class='tooltip' /> Defeated, but spied upon<br><input type='checkbox' id='chbRemRed' onclick='return chkBoxClick($(this).is(\":checked\"), " +
             pos.s.remred +
-            ")'> <img src='https://media.innogamescdn.com/com_DS_FR/Scripts/Pillage/red.png' title='Undo' alt='' class='tooltip' /> Undo</tr><tr><td align='right' colspan='2'><input type='button' class='btn' id='btnSettingsReset' value='Reset' onclick='resetCookie(); UI.SuccessMessage(\"Reset performed\",1000); run(); return false;'><input type='button' class='btn' id='btnSettingsApply' value='Appliquer' onclick='saveSettings(); run(); return false'><input type='button' class='btn' id='btnSettingsSave' value='Sauvegarder' onclick='saveSettings(); return false;'></tr></tbody></table>"
+            ")'> <img src='https://media.innogamescdn.com/com_DS_FR/Scripts/Pillage/red.png' title='Undo' alt='' class='tooltip' /> Undo</tr><tr><td align='right' colspan='2'><input type='button' class='btn' id='btnSettingsReset' value='Reset' onclick='resetCookie(); UI.SuccessMessage(\"Reset performed\",1000); run(); return false;'><input type='button' class='btn' id='btnSettingsApply' value='Apply' onclick='saveSettings(); run(); return false'><input type='button' class='btn' id='btnSettingsSave' value='Save' onclick='saveSettings(); return false;'></tr></tbody></table>"
         ));
 
 
@@ -531,17 +531,17 @@ function addTable() {
 function doSettings() {
     if ($('#showSettings')
         .html()
-        .indexOf('Cacher') != -1) {
+        .indexOf('Hide') != -1) {
         $('#bodySettings')
             .hide();
 
         $('#showSettings')
-            .html('Voir');
+            .html('More');
     } else {
         $('#bodySettings')
             .show();
         $('#showSettings')
-            .html('Cacher');
+            .html('Hide');
     }
 }
 
