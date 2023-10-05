@@ -792,7 +792,9 @@ function fillLandingTimeFromCommand() {
                 .find('td:eq(1)')
                 .text()
                 .trim();
+	    console.log(commandLandingTime)
             const landingTime = getTimeFromString(commandLandingTime);
+	    console.log(landingTime)
 
             jQuery('#raLandingTime').val(landingTime);
             UI.SuccessMessage(tt('Landing time was updated!'));
