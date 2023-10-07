@@ -1549,8 +1549,8 @@ function getTimeFromString(timeLand) {
     let serverDate = document.getElementById('serverDate').innerText.split('/');
 
     let TIME_PATTERNS = {
-        today: 'dzisiaj at %s',
-        tomorrow: 'jutro at %s',
+        today: 'dzisiaj o %s',
+        tomorrow: 'jutro o %s',
         later: 'dnia %1 o %2',
     };
 
