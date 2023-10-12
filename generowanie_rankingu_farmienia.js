@@ -57,7 +57,7 @@ function getByValue(map, searchValue) {
 }
  
 var startDialog = Dialog.show(
-    'Script', '<div id="dudialog">Lista plemiona do sprawdzenia<br><textarea id="ScriptAlly" placeholder="Lista skrotow plemion, oddzielona spacja"  style="width: 96%; margin: 0px auto 0px auto; border: 1px solid rgb(129, 66, 2);" required></textarea><br><label for="top_how_many">Ile graczy sprawdzic? (25-2000):</label><input type="number" id="top_how_many" name="top_how_many" value="25" min="25" max="5000"><button type="button" onclick="handleButtonEvent()" style="border-radius: 5px; border: 1px solid #000; color: #fff; background: linear-gradient(to bottom, #947a62 0%,#7b5c3d 22%,#6c4824 30%,#6c4824 100%)">Wygeneruj rankingi!</button><br>Po zakcpetowaniu prosze poczekac na wygenerowanie listy...<br><br><table id="buttons-script"></table></div>'
+    'Script', '<div id="dudialog">Lista plemiona do sprawdzenia<br><textarea id="ScriptAlly" placeholder="Lista skrotow plemion, oddzielona spacja"  style="width: 96%; margin: 0px auto 0px auto; border: 1px solid rgb(129, 66, 2);" required></textarea><br><label for="top_how_many">Ile graczy sprawdzic? (25-5000):</label><input type="number" id="top_how_many" name="top_how_many" value="25" min="25" max="5000"><button type="button" onclick="handleButtonEvent()" style="border-radius: 5px; border: 1px solid #000; color: #fff; background: linear-gradient(to bottom, #947a62 0%,#7b5c3d 22%,#6c4824 30%,#6c4824 100%)">Wygeneruj rankingi!</button><br>Po zakcpetowaniu prosze poczekac na wygenerowanie listy...<br><br><table id="buttons-script"></table></div>'
 )
  
 var handleButtonEvent = () => {
