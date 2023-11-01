@@ -1,8 +1,8 @@
 javascript: var config = [{
-'tribes': ['FNT', 'FNT!', '**MC**', '*MC*' , 'NPJ :('],
+'tribes': ['NnŻ6','FRONT','*EF*','FRONT.','NnŻ3','NnŻ5','...'],
 'color': 'RED'
 }, {
-'tribes': [':EF:','*EF*'],
+'tribes': ['**MC**','-BH-','KMT','MC!'],
 'color': 'BLUE'
 }, {
 'players': [''],
